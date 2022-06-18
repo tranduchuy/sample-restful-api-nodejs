@@ -17,7 +17,7 @@ const initExpressServer = () => {
 const start = async () => {
     try {
         await db.authenticate();
-        await db.sync({force: true})
+        await db.sync({force: false});
         console.log('Connection has been established successfully.');
         initExpressServer();
     } catch (error) {
